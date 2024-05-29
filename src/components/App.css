@@ -1,18 +1,21 @@
+/* Importando a fonte Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
 /* Variáveis de Tema */
 :root {
   --background-color-light: #eeeeee;
   --text-color-light: #000000;
-  --background-color-dark: #1e1e1e; /* Fundo mais escuro */
+  --background-color-dark: #1e1e1e;
   --text-color-dark: #ffffff;
   --container-background-light: #f5f5f5;
-  --container-background-dark: #333333;
+  --container-background-dark: #494949;
 }
 
 /* Estilos Comuns */
 body {
   transition: background-color 0.3s, color 0.3s;
-  background-color: var(--background-color-light); /* Valor padrão */
-  color: var(--text-color-light); /* Valor padrão */
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -42,6 +45,10 @@ body {
   color: var(--text-color-dark);
 }
 
+.dark-theme .icon-button {
+  color: var(--text-color-dark);
+}
+
 /* Layout */
 .container {
   display: flex;
@@ -61,13 +68,13 @@ body {
 }
 
 .timer-container {
-  width: calc(100% - 40px); /* Adjusted width */
-  margin: 0 auto 20px auto; /* Centered with margin */
+  width: calc(100% - 40px);
+  margin: 0 auto 20px auto;
 }
 
 .inspiration-container {
-  width: calc(100% - 40px); /* Adjusted width */
-  margin: 0 auto 20px auto; /* Centered with margin */
+  width: calc(100% - 40px);
+  margin: 0 auto 20px auto;
 }
 
 /* Outros estilos */
@@ -102,7 +109,7 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-  background-color: #61dafb;
+  background-color: #2d7de6;
   color: white;
   cursor: pointer;
 }
@@ -120,45 +127,6 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.inspiration-box {
-  margin-top: 20px;
-}
-
-.inspiration-box textarea {
-  width: calc(100% - 20px);
-  margin: 0 10px;
-}
-
-.inspiration-box h2 {
-  margin-bottom: 20px;
-}
-
-.image-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.image-container {
-  width: calc(33.33% - 20px);
-  margin: 10px;
-}
-
-.image-container img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.image-container button {
-  margin-top: -30px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
 }
 
 .task-input input {
@@ -184,9 +152,13 @@ li {
   position: absolute;
   width: 100%;
   text-align: center;
-  color: #fff; /* White text for the progress bar */
+  color: #fff;
 }
- 
+
 .ButtonContainer {
-  margin-top: 10px; /* Adicione margem superior para separar o botão do QuantityInput */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin: 5px;
 }
