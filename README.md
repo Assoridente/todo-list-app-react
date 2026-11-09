@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Tarefas e Foco · React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação de produtividade que reúne lista de tarefas, sessões de concentração e um painel de inspiração personalizável.
 
-## Available Scripts
+Projeto de estudo de componentes React, estado, efeitos e construção de interfaces com Material UI.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Adicionar tarefas e validar entradas vazias ou duplicadas.
+- Concluir tarefas com animação e retorno sonoro.
+- Configurar uma sessão de foco, pausar, retomar e reiniciar o temporizador.
+- Exibir ou ocultar o tempo restante.
+- Alternar entre temas claro e escuro.
+- Escolher uma imagem de fundo.
+- Personalizar o painel de inspiração com texto e imagens.
+- Receber aviso sonoro e, quando autorizado no navegador, notificação ao terminar uma sessão.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React 18 · JavaScript · Material UI 5 · Emotion · React Transition Group · Create React App.
 
-### `npm test`
+## Como executar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pré-requisitos: Node.js e npm compatíveis com as dependências do projeto.
 
-### `npm run build`
+```bash
+git clone https://github.com/Assoridente/todo-list-app-react.git
+cd todo-list-app-react
+npm ci
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Abra [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O repositório usa a branch padrão `master`. O arquivo `package-lock.json` registra as versões utilizadas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Comandos disponíveis
 
-### `npm run eject`
+| Comando | Resultado |
+| --- | --- |
+| `npm start` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a versão de produção em `build/` |
+| `npm test` | Abre o executor de testes do projeto |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O comando de testes existe no projeto, mas sua presença não significa que todos os fluxos tenham cobertura automatizada.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Organização
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+src/
+  App.jsx                      estado das tarefas, tema e fundo
+  index.jsx                    inicialização da aplicação
+  components/
+    TaskList.jsx               tarefas e conclusão
+    Timer.jsx                  sessão de foco e notificações
+    InspirationPanel.jsx       texto e imagens de inspiração
+    App.css                    estilos da aplicação
+    Timer.css                  transições do temporizador
+public/                        página HTML e recursos públicos
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Dados e limitações
 
-## Learn More
+Os dados ficam no estado da aplicação durante a sessão. Tarefas, imagens e preferências não são salvos após recarregar a página; não há back-end, autenticação ou sincronização entre dispositivos.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+O som e as notificações dependem das permissões e das políticas do navegador. A aplicação utiliza uma base Create React App existente; atualizar o ambiente de build é uma possível etapa de manutenção.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Evolução
 
-### Code Splitting
+Esta aplicação amplia a proposta da [Lista de Tarefas Web](https://github.com/Assoridente/Projeto-trilha-todolist), organizada aqui com componentes e novas interações.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Próximas melhorias: persistência local, acessibilidade dos controles, cobertura dos fluxos de tarefas e temporizador e revisão das dependências.
